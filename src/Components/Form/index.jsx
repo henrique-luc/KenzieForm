@@ -2,6 +2,8 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+import { ContainerForm } from "./style";
+
 export default function Form() {
   const schema = yup.object().shape({
     name: yup.string().required("Name required"),
@@ -37,8 +39,8 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmitFunction)}>
-      <section>
+    <ContainerForm onSubmit={handleSubmit(onSubmitFunction)}>
+      <section className="container_form-inputs">
         <input type="text" placeholder="Name" {...register("name")} />
         {errors.name && <span>{errors.name.message}</span>}
         <input type="email" placeholder="Email" {...register("email")} />
@@ -58,7 +60,10 @@ export default function Form() {
           <span>{errors.confirmPassword.message}</span>
         )}
       </section>
-      <button type="submit">Register</button>
-    </form>
+      <section className="container_form-button">
+        <button type="submit">Register</button>
+        <div className="container_form-circle"></div>
+      </section>
+    </ContainerForm>
   );
 }
