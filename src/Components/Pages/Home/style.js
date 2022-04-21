@@ -25,6 +25,12 @@ export const ContainerHome = styled.div`
     align-items: center;
   }
 
+  figure,
+  img,
+  figcaption {
+    display: none;
+  }
+
   h1 {
     color: white;
     font-size: 40px;
@@ -33,12 +39,44 @@ export const ContainerHome = styled.div`
 
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: row;
     background-image: none;
+
+    figure,
+    img,
+    figcaption {
+      display: flex;
+    }
+
+    figure {
+      width: 50vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    img {
+      height: 100vh;
+    }
+
+    figcaption {
+      display: none;
+    }
 
     h1 {
       color: black;
       font-size: 40px;
       width: 20px;
+    }
+
+    .container_home-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
     }
   }
 `;

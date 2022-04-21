@@ -9,12 +9,6 @@ export const ContainerForm = styled.form`
     flex-direction: column;
   }
 
-  figure,
-  img,
-  figcaption {
-    display: none;
-  }
-
   input {
     background-color: transparent;
     border: none;
@@ -31,6 +25,10 @@ export const ContainerForm = styled.form`
   input:focus {
     color: white;
     outline: 0;
+  }
+
+  span {
+    width: 320px;
   }
 
   .container_form-button {

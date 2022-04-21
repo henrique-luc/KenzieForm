@@ -1,6 +1,7 @@
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useHistory } from "react-router-dom";
 
 import { ContainerForm } from "./style";
 
@@ -28,6 +29,8 @@ export default function Form() {
       .oneOf([yup.ref("password")]),
   });
 
+  const history = useHistory();
+
   const {
     register,
     handleSubmit,
@@ -36,6 +39,7 @@ export default function Form() {
 
   const onSubmitFunction = (data) => {
     console.log(data);
+    history.push("/welcome");
   };
 
   return (
