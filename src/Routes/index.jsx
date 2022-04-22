@@ -9,7 +9,7 @@ export default function Routes() {
       <Route exact path={"/"}>
         <Home />
       </Route>
-      <Route exact path={"/welcome"}>
+      <Route exact path={"/welcome/:id"}>
         <Welcome />
       </Route>
     </Switch>

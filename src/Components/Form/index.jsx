@@ -2,10 +2,13 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 import { ContainerForm } from "./style";
 
 export default function Form() {
+  const [newUser, setNewUser] = useState([]);
+
   const schema = yup.object().shape({
     name: yup.string().required("Name required"),
     email: yup
@@ -38,9 +41,11 @@ export default function Form() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmitFunction = (data) => {
-    console.log(data);
-    history.push("/welcome");
+    setNewUser([...newUser, data]);
+    history.push("/welcome/:id");
   };
+
+  console.log(newUser);
 
   return (
     <ContainerForm onSubmit={handleSubmit(onSubmitFunction)}>

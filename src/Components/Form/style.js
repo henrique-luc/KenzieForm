@@ -37,7 +37,7 @@ export const ContainerForm = styled.form`
   }
 
   .container_form-circle {
-    background-color: #ff7e2a;
+    background-color: #2ebbf2;
     padding: 20px;
     border-radius: 100%;
     width: 30px;
@@ -72,6 +72,10 @@ export const ContainerForm = styled.form`
 
     button {
       color: black;
+    }
+
+    .container_form-circle {
+      background-color: #ff7e2a;
     }
   }
 `;

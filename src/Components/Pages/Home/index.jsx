@@ -1,14 +1,11 @@
 import Form from "../../Form";
 import { ContainerHome } from "./style";
-import MyCarousel from "../../Carousel";
+import Carousel from "../../Carousel";
 
 export default function Home() {
   return (
     <ContainerHome>
-      <figure>
-        <img src="1.jpg" alt="" />
-        <figcaption></figcaption>
-      </figure>
+      <Carousel />
       <section className="container_home-form">
         <h1>Create Account</h1>
         <Form></Form>

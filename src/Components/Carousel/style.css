@@ -1,0 +1,44 @@
+.mySwiper {
+  width: 50vw;
+  margin: 0;
+}
+
+.swiper-slide {
+  display: none;
+}
+
+figure,
+img,
+figcaption {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-slide {
+    display: flex;
+  }
+
+  figure,
+  img,
+  figcaption {
+    display: flex;
+  }
+
+  .swiper-slide img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .swiper-slide figcaption {
+    display: none;
+  }
+
+  .swiper-slide figure {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+  }
+}
