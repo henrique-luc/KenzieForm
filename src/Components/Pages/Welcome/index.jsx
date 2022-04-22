@@ -11,12 +11,11 @@ export default function Welcome({ newUser }) {
   return (
     <ContainerWelcome>
       <section>
-        <button onClick={() => history.push("/")}>Inicio</button>
+        <button onClick={() => history.push("/")}>Home</button>
       </section>
       <section className="container_welcome-title">
-        <video autoplay loop muted src=""></video>
         <h1>Welcome</h1>
-        <h2>Henrique</h2>
+        <h2></h2>
       </section>
     </ContainerWelcome>
   );

@@ -5,12 +5,21 @@ export const ContainerWelcome = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-image: url("5.jpg");
 
   .container_welcome-title {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #b603ff;
+    color: #b603ff;
   }
 
   h1 {
@@ -32,6 +41,11 @@ export const ContainerWelcome = styled.div`
     h1 {
       font-size: 120px;
       background-size: 500px;
+    }
+
+    button:hover {
+      border-bottom: 1px solid #fa5331;
+      color: #fa5331;
     }
   }
 `;
