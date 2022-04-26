@@ -42,7 +42,7 @@ export default function Form() {
 
   const onSubmitFunction = (data) => {
     setNewUser([...newUser, data]);
-    history.push("/welcome/:id");
+    history.push(`/welcome/${data.name}`);
   };
 
   console.log(newUser);
